@@ -5,9 +5,7 @@ import { unpkgPathPlugin } from './plugins/unpkg-path-plugin';
 
 const App = () => {
     const ref = useRef<any>();
-    const [input, setInput] = useState(
-        'const App = () => <div>Hi there!</div>'
-    );
+    const [input, setInput] = useState('console.log(1);');
     const [code, setCode] = useState('');
 
     const startService = async () => {
@@ -28,7 +26,7 @@ const App = () => {
             entryPoints: ['index.js'],
             bundle: true,
             write: false,
-            plugins: [unpkgPathPlugin()],
+            plugins: [unpkgPathPlugin(input)],
             define: {
                 'process.env.NODE_ENV': '"production"',
                 global: 'window',
