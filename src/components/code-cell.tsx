@@ -23,10 +23,18 @@ const CodeCell = () => {
                         flexDirection: 'row',
                     }}
                 >
-                    <CodeEditor
-                        initialValue="const a = 1;"
-                        onChange={(value) => setInput(value)}
-                    />
+                    <Resizable direction="horizontal">
+                        <CodeEditor
+                            initialValue="import ReactDOM from 'react-dom';
+
+                            const App = () => {
+                              return <h1>Hello World</h1>;
+                            };
+                            
+                            ReactDOM.render(App, document.querySelector('#root'));"
+                            onChange={(value) => setInput(value)}
+                        />
+                    </Resizable>
                     <Preview code={code} />
                 </div>
             </Resizable>
