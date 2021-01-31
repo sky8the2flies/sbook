@@ -1,0 +1,16 @@
+.w-md-editor .title {
+    line-height: unset !important;
+    font-size: unset !important;
+    font-weight: unset !important;
+}
+.w-md-editor .tag {
+    background-color: unset !important;
+    height: unset !important;
+    padding-left: unset !important;
+    padding-right: unset !important;
+    font-size: unset !important;
+}
+
+.w-md-editor ul {
+    line-height: 1;
+}
